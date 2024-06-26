@@ -1,0 +1,49 @@
+.pdfWrapper {
+    position: relative;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, .2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.paginationItem {
+    border-radius: 10px;
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.noItem {
+    width: 26px;
+    height: 26px;
+}
+
+.paginateWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.centerBox {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
