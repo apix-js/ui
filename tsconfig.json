@@ -29,7 +29,6 @@
   },
   "include": [
     "src",
-    "lib",
     "types.d.ts"
   ],
   "references": [

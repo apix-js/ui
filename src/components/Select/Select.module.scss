@@ -1,0 +1,108 @@
+.wrapper {
+    position: relative;
+    border: 1px solid $ash-light;
+    min-width: toRem(200);
+    border-radius: map-get($map: $border-radius, $key: 'md');
+    background-color: white;
+    cursor: pointer;
+}
+
+.open {
+    border-color: $primary;
+
+    input {
+        cursor: default !important;
+    }
+}
+
+.selectedContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .inputContainer {
+        position: relative;
+        padding: map-get($map: $padding, $key: 'md');
+        font-size: map-get($map: $font-size, $key: 'md');
+        box-sizing: border-box;
+        cursor: default;
+        z-index: 1;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        flex: 1;
+        width: 100%;
+        padding-right: 25px;
+        cursor: pointer;
+    }
+
+    .valueContainer {
+        width: 100%;
+        position: absolute;
+        font-size: map-get($map: $font-size, $key: 'md');
+        right: 0;
+        left: map-get($map: $padding, $key: 'md');
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .expandIcon {
+        padding: map-get($map: $padding, $key: 'md');
+        border-left: 1px solid $ash-light;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        color: $ash-dark;
+    }
+
+    .clearIcon {
+        padding: map-get($map: $padding, $key: 'md');
+        position: absolute;
+        right: 35px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: $ash-dark;
+        z-index: 1;
+    }
+}
+
+.optionsList {
+    position: absolute;
+    margin-top: map-get($map: $margin, $key: 'sm');
+    border-radius: map-get($map: $border-radius, $key: 'sm');
+    border: 1px solid $ash-light;
+    width: 100%;
+    padding: calc(map-get($map: $padding, $key: 'md')/3);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    // max-height: 200px;
+    // overflow: auto;
+
+    &.top {
+        top: 100%;
+    }
+
+    .option {
+        padding: toRem(8) map-get($map: $padding, $key: 'sm');
+        padding-left: map-get($map: $padding, $key: 'md');
+        display: flex;
+        align-items: center;
+        cursor: default;
+        font-size: map-get($map: $font-size, $key: 'md');
+        border-radius: map-get($map: $border-radius, $key: 'sm');
+
+        &:hover {
+            background-color: lighten($color: $ash-light, $amount: 7%);
+        }
+
+        .emptyIcon {
+            width: 14px;
+            height: 14px;
+        }
+
+        span {
+            margin-left: map-get($map: $margin, $key: 'sm');
+        }
+    }
+}

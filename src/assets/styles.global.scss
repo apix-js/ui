@@ -1,0 +1,90 @@
+@import "functions";
+@import "reset";
+
+// Color Definitions
+$primary: #0070f3;
+$button-background-color: $primary;
+$button-hover-color: darken($primary, 10%);
+$button-active-color: lighten($primary, 10%);
+$text-color: adjust-hue($primary, 15deg);
+$border-color: desaturate($primary, 20%);
+$secondary: adjust-hue($primary, 180deg);
+$danger: #ff4757;
+$warning: #ffa502;
+$info: #1e90ff;
+
+$button-secondary-background-color: $secondary;
+$button-secondary-hover-color: darken($secondary, 10%);
+$button-secondary-active-color: lighten($secondary, 10%);
+
+$button-danger-background-color: $danger;
+$button-danger-hover-color: darken($danger, 10%);
+$button-danger-active-color: lighten($danger, 10%);
+
+$button-warning-background-color: $warning;
+$button-warning-hover-color: darken($warning, 10%);
+$button-warning-active-color: lighten($warning, 10%);
+
+$button-info-background-color: $info;
+$button-info-hover-color: darken($info, 10%);
+$button-info-active-color: lighten($info, 10%);
+
+$ash-light: hsl(240,5.9%, 90%);
+$ash-medium: #d9d9d9;
+$ash-dark: #a6a6a6;
+
+
+// Sizing Maps
+$border-radius : ('sm': toRem(4), 'md':toRem(6), 'lg':toRem(10), 'xl': toRem(15));
+$font-size : ('sm': toRem(11), 'md': toRem(14), 'lg': toRem(18), 'xl': toRem(24));
+$margin : ('sm': toRem(5), 'md': toRem(10), 'lg': toRem(15), 'xl': toRem(20));
+$padding : ('sm': toRem(5), 'md': toRem(10), 'lg': toRem(15), 'xl': toRem(20));
+
+
+// Breakpoints
+$breakpoints : ('mobile': "(max-width:599px)",
+    'tab-portrait-up': "(min-width:600px)",
+    'tab-portrait-only': "(min-width:600px) and (max-width:960px)",
+    'tab-landscape-up': "(min-width:960px)",
+    'tab-landscape-only': "(min-width:960px) and (max-width:1200px)",
+    'laptop-up': "(min-width:1200px)",
+    'laptop-only': "(min-width:1200px) and (max-width:1660px)",
+    'desktop': "(min-width:1660px)",
+    'high-res-devices': "(min-width:2560px)"
+);
+
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%,
+            25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%,
+            22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%,
+            22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%,
+            85% -10%, 70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%,
+            95% 60%, 105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%,
+            95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}

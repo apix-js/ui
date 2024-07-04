@@ -1,0 +1,65 @@
+.paginationContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: flex-end;
+
+    .paginationItems {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+
+        .paginateItem {
+            width: 30px;
+            height: 30px;
+            display: grid;
+            place-items: center;
+            border-radius: 100%;
+
+            &:hover {
+                @extend .hover
+            }
+        }
+
+        .paginateNumbers {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+
+            span:not(.dots) {
+                width: 30px;
+                height: 30px;
+                display: grid;
+                place-items: center;
+                border-radius: 100%;
+
+                &:not(.currentPage):hover {
+                    @extend .hover
+                }
+            }
+
+            span {
+                &.dots {
+                    color: $ash-dark;
+                }
+            }
+
+            .currentPage {
+                background-color: $primary;
+                color: white;
+            }
+        }
+    }
+}
+
+.hover {
+    background-color: $ash-light;
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none;
+    color: $ash-dark;
+}
