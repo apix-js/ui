@@ -1,4 +1,3 @@
-/// <reference types="react" />
 declare const DataTable: <T extends object>(props: DataTableProps<T>) => import("react/jsx-runtime").JSX.Element;
 export interface DataTableProps<T extends object> {
     data: T[];

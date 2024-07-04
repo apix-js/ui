@@ -2,7 +2,7 @@ import { StoryObj } from '@storybook/react';
 
 declare const meta: {
     title: string;
-    component: import('../../../node_modules/.pnpm/react@18.2.0/node_modules/react').FC<import("./Button").ButtonProps>;
+    component: import('../../../node_modules/react').FC<import('./Button').ButtonProps>;
     parameters: {
         layout: string;
     };
