@@ -39,6 +39,9 @@ importers:
       '@storybook/blocks':
         specifier: ^8.1.11
         version: 8.1.11(@types/react-dom@18.2.24)(@types/react@18.2.74)(prettier@3.3.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@storybook/manager-api':
+        specifier: ^8.1.11
+        version: 8.1.11(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/react':
         specifier: ^8.1.11
         version: 8.1.11(prettier@3.3.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.4)
@@ -48,6 +51,9 @@ importers:
       '@storybook/test':
         specifier: ^8.1.11
         version: 8.1.11
+      '@storybook/theming':
+        specifier: ^8.1.11
+        version: 8.1.11(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@types/node':
         specifier: ^20.12.5
         version: 20.12.5

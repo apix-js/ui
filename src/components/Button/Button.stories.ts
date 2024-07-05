@@ -15,7 +15,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: 'Default Button'
+    children: 'Default Button',
+    onClick: () => console.log('S')
   }
 };
 
@@ -33,9 +34,9 @@ export const ButtonRipple: Story = {
   }
 };
 
-export const ButtonBubbly: Story = {
-  args: {
-    children: 'Bubbly Button',
-    effect: 'bubbly'
-  }
-};
+// export const ButtonBubbly: Story = {
+//   args: {
+//     children: 'Bubbly Button',
+//     effect: 'bubbly'
+//   }
+// };
