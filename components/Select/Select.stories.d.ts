@@ -2,7 +2,7 @@ import { StoryObj } from '@storybook/react';
 
 declare const meta: {
     title: string;
-    component: import('../../../node_modules/react').FC<import('./Button').ButtonProps>;
+    component: import('../../../node_modules/react').FC<import('./Select').SelectProps>;
     parameters: {
         layout: string;
     };
@@ -11,5 +11,3 @@ declare const meta: {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export declare const Default: Story;
-export declare const Button3D: Story;
-export declare const ButtonRipple: Story;
