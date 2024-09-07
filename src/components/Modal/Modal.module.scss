@@ -1,0 +1,85 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: map-get($map: $padding, $key: 'xl');
+
+    &.topLeft {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    &.topRight {
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    &.topCenter {
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &.bottomLeft {
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    &.bottomRight {
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    &.bottomCenter {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+}
+
+.modalContent {
+    background-color: white;
+    border-radius: map-get($map: $border-radius, $key: 'xl');
+    position: relative;
+    width: 448px;
+}
+
+.modalTitle {
+    padding: map-get($map: $padding, $key: 'lg') map-get($map: $padding, $key: 'xl');
+    font-size: map-get($map: $font-size, $key: 'lg');
+    line-height: 28px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: toRem(24);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    color: $ash-darkest;
+    padding: 0;
+
+    &:hover {
+        background-color: $ash-light;
+    }
+}
+
+.modalBody {
+    padding: map-get($map: $padding, $key: 'md') map-get($map: $padding, $key: 'xl');
+}

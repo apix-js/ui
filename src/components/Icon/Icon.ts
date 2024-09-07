@@ -16,7 +16,7 @@ export * as CG from 'react-icons/cg';
 // export * as HI2 from 'react-icons/hi2';
 // export * as IM from 'react-icons/im';
 // export * as LIA from 'react-icons/lia';
-// export * as IO4 from 'react-icons/io';
+export * as IO4 from 'react-icons/io';
 export * as IO5 from 'react-icons/io5';
 // export * as LU from 'react-icons/lu';
 // export * as MD from 'react-icons/md';
@@ -30,4 +30,3 @@ export * as IO5 from 'react-icons/io5';
 // export * as TI from 'react-icons/ti';
 // export * as VSC from 'react-icons/vsc';
 // export * as WI from 'react-icons/wi';
-

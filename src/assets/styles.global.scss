@@ -32,13 +32,14 @@ $button-info-active-color: lighten($info, 10%);
 $ash-light: hsl(240,5.9%, 90%);
 $ash-medium: #d9d9d9;
 $ash-dark: #a6a6a6;
+$ash-darkest: #4d4d4d;
 
 
 // Sizing Maps
-$border-radius : ('sm': toRem(4), 'md':toRem(6), 'lg':toRem(10), 'xl': toRem(15));
+$border-radius : ('sm': toRem(4), 'md':toRem(6), 'lg':toRem(10), 'xl': toRem(14));
 $font-size : ('sm': toRem(11), 'md': toRem(14), 'lg': toRem(18), 'xl': toRem(24));
-$margin : ('sm': toRem(5), 'md': toRem(10), 'lg': toRem(15), 'xl': toRem(20));
-$padding : ('sm': toRem(5), 'md': toRem(10), 'lg': toRem(15), 'xl': toRem(20));
+$margin : ('sm': toRem(4), 'md': toRem(8), 'lg': toRem(16), 'xl': toRem(24));
+$padding : ('sm': toRem(4), 'md': toRem(8), 'lg': toRem(16), 'xl': toRem(24));
 
 
 // Breakpoints
