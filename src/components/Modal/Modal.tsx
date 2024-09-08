@@ -55,8 +55,16 @@ const variants: Record<string, Variants> = {
     }
 };
 
+const shakeVariants: Variants = {
+    shake: {
+        x: [0, -10, 10, -10, 10, 0],
+        transition: { duration: 0.3 }
+    }
+};
+
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, position = 'default' }) => {
     const [modalRoot, setModalRoot] = useState<HTMLElement | null>(null);
+    const [shake, setShake] = useState(false);
 
     useEffect(() => {
         let elm = document.getElementById('apix-modal-root');
@@ -70,6 +78,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, positio
     }, []);
 
     const handleClose = () => {
+        // setShake(false);
         onClose && onClose();
     };
 
@@ -77,7 +86,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, positio
         return [styles.modalOverlay, styles[position]].join(' ');
     }, [position]);
 
-    // const modalRef = useClickOutside<HTMLDivElement>(handleClose);
+    const modalRef = useClickOutside<HTMLDivElement>(() => {
+        setShake(true);
+
+        setTimeout(() => {
+            setShake(false);
+        }, 500);
+    });
 
     const modalContent = (
         <AnimatePresence mode="wait">
@@ -88,11 +103,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, positio
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}>
                     <motion.div
-                        // ref={modalRef}
+                        ref={modalRef}
                         className={styles.modalContent}
-                        variants={variants[position]}
+                        variants={shake ? shakeVariants : variants[position]}
+                        // variants={{ ...variants[position], ...shakeVariants }}
                         initial="initial"
-                        animate="animate"
+                        animate={shake ? 'shake' : 'animate'}
                         exit="exit">
                         <button onClick={handleClose} className={styles.closeButton}>
                             <Icon.IO4.IoIosClose />
@@ -110,7 +126,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, positio
     return modalRoot ? ReactDOM.createPortal(modalContent, modalRoot) : null;
 };
 
-interface ModalProps {
+export interface ModalProps {
     isOpen?: boolean;
     title?: string;
     onClose?: () => void;
@@ -126,4 +142,4 @@ interface ModalProps {
         | 'rightCenter';
 }
 
-export default Modal;
+export { Modal };
